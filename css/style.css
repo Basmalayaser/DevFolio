@@ -1,0 +1,302 @@
+
+body{
+    background-color: rgb(245,245,245);
+}
+:root{
+    --main-color:#0078ff;
+}
+.general-title h2{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.general-title p{
+    color: #4e4e4e;
+    position: relative;
+}
+.general-title p::after{
+    position: absolute;
+    content: "";
+    height:6px;
+    width:50px;
+    background-color:var(--main-color);
+    bottom:-20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* srart home style */
+#home{
+    background-image:url(../images/hero-bg.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+}
+#home .home-content{
+    background-color: rgba(0, 0, 0, 0.50);
+    color: white;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.home-content h1{
+    font-weight: 600;
+    font-size: 5rem;
+}
+.home-content p{
+    font-weight: 500;
+    font-size: 3rem;
+}
+/* start navbar  */
+.navbar{
+    background-color: rgba(0, 0, 0, 0.619);
+}
+.nav-link{
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+.nav-link:focus, .nav-link:hover {
+    color: white;
+}
+ .navbar .nav-item a{
+    position: relative;
+ }
+ .navbar .nav-item a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0px;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+.navbar .nav-item a:hover:before, .navbar .active:before {
+    visibility: visible;
+    width: 100%;
+}
+
+
+
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        margin-left: 1.5rem;
+        padding-right: 0;
+         padding-left: 0;
+}}
+
+/* start about section */
+
+#about .container{
+    background-color: #fff;
+}
+ #about p ,#services p{
+    color: #4e4e4e;
+ }
+ .about-text p,.contact-p{
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 2rem;
+ }
+ .title-s {
+    font-weight: 600;
+    color: #1e1e1e;
+    font-size: 1.1rem;
+}
+.about-t{
+    font-size: 2rem;
+    position: relative;
+}
+.about-t::after{
+    position: absolute;
+    content: "";
+    height:4px;
+    width:100px;
+    background-color:var(--main-color);
+    bottom:-15px;
+    left: 0;
+}
+.progress, .progress-stacked {
+    border-radius: 0;
+    background-color: #cde1f8;
+}
+.progress-bar {
+    background-color:var(--main-color);
+}
+
+/* srart services section */
+#services .card .card-body .circle,.counter .circle{
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid var(--main-color);
+    transition: all 0.5S;
+}
+#services .card .card-body .circle i,.counter .circle i{
+    font-size: 35px;
+}
+#services .card .card-body .circle:hover{
+    background-color: var(--main-color);
+    border: 8px solid #cde1f8;
+    color: #fff;
+    
+}
+
+/* start counter section */
+.counter,.testimonial{
+    color: #fff;
+}
+.testimonial,#contact{
+    background-image: url(../images/counters-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    padding: 100px 0;
+    position: relative;
+}
+.counter{
+    background-image:linear-gradient(rgba(0, 119, 255, 0.565),rgba(0, 119, 255, 0.565)),url(../images/counters-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    padding: 50px 0;
+}
+.container .circle{
+    width: 100px;
+    height: 100px;
+    border: 10px solid #cde1f8;
+}
+.counter .number{
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+
+/* srart work section*/
+#work .card i{
+    font-size: 35px;
+}
+#work .card .card-img{
+    transition: all 0.5s;
+}
+#work .card .card-img:hover{
+    transform: scale(1.2);
+}
+ 
+p.card-text span{
+    color: var(--main-color);
+}
+
+/* srart carousel section */
+.testimonial{
+    background-image: linear-gradient(rgba(0, 119, 255, 0.565),rgba(0, 119, 255, 0.565)),url(../images/overlay-bg.jpg);
+}
+.testimonial-img{
+    width: 150px;
+    height: 150px;
+}
+
+
+.carousel-item p{
+    font-size: 25px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 200;
+}
+.carousel-item .inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* start blog section */
+#blog .part1-img{
+    width: 30px;
+    height: 30px;
+}
+#blog a{
+    text-decoration: none;
+    color: #1e1e1e;
+}
+
+#blog p{
+    color: #4e4e4e;
+}
+.badge{
+    width: fit-content;
+    font-weight:400;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* start contact section */
+#contact{
+    background-image:linear-gradient(rgba(0, 119, 255, 0.565),rgba(0, 119, 255, 0.565)), url(../images/overlay-bg.jpg);
+
+}
+.block{
+    background-color: #fff;
+    margin-top: 100px;
+}
+#contact ul{
+    list-style: none;
+    padding: 0;
+}
+#contact .list-ico  span{
+    color: #0078ff;
+    margin-right: 5px;
+}
+#contact .social-icon{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--main-color);
+    border-radius: 50%;
+    transition: all 0.5S;
+}
+#contact .social-icon a{
+    color: black;
+}
+#contact .social-icon:hover{
+    background-color: var(--main-color);
+    border: 3px solid #cde1f8;
+    color: #fff;
+}
+#contact .social-icon:hover a.icon{
+    color: #fff;
+}
+#contact .btn{
+    background-color: #0078ff;
+    color: #fff;
+}
+
+
+/* start footer */
+footer{
+    background-color: #005dc7;
+    color: #fff;
+    height: 100px;
+}
